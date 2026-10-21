@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const students=[
+    {name:"Aye",age:19},
+    {name:"Min",age:17},
+    {name:"Su",age:22}
+    ];
+    
+    students.forEach(student=>console.log(student.name));
+
+    const adults=students.filter(student=>student.age>=18);
+    console.log("Adults:", adults);
+
+    const names=students.map(student=>student.name);
+    console.log("Names:", names);
+
+    const ages=students.map(student=>student.age);
+    console.log("Ages:", ages);
+
+    const underAge=students.find(student=>student.age<18);
+    console.log(underAge);
+    
+    </script>
+</body>
+</html>

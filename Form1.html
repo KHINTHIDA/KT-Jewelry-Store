@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form id="registrationForm">
+        <label for="name">Name:</label>
+        <input id="name" name="name" type="text" required><br>
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" required><br>
+        <label for="password">Password:</label>
+        <input id="password" name="password" type="password" required><br>
+        <label for="confirm-password">Confirm Password:</label>
+        <input id="confirm-password" name="confirm-password" type="password" required><br>
+        <label for="age">Age:</label>
+        <input id="age" name="age" type="number"  required><br>
+        <input type="submit" value="Register">
+        <p id="message" role="alert"></p>
+
+        <script>
+            const form = document.querySelector("#registrationForm");
+      const message = document.querySelector("#message");
+      const confirmPassword = document.querySelector("#confirm-password");
+
+      form.addEventListener("submit", function (event) {
+        
+        event.preventDefault();
+
+        const age = Number(document.querySelector("#age").value);
+        const errors = [];
+
+        if (!Number.isInteger(age) || age < 18) {
+          errors.push("You must be at least 18 years old.");
+        }
+
+        if (errors.length > 0) {
+          message.textContent = errors.join(" ");
+        } else {
+          message.textContent = "Registration details look good!";
+        }
+        if(password.value !== confirmPassword.value) {
+          message.textContent += " Passwords do not match.";
+        }
+      });
+
+      const password = document.querySelector("#password");
+      const passwordMessage = document.querySelector("#passwordMessage");
+      
+      password.addEventListener("input", () => {
+       
+        if (password.value.length < 6) {
+          passwordMessage.textContent = "Password is too short";
+           } else {
+          passwordMessage.textContent = "Password looks good";
+        }
+      });
+        </script>
+    </form>
+</body>
+</html>

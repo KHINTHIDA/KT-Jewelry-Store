@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const getGrade = (score) => {
+    if(score<0||score>100){
+        return "Invalid score";
+    }
+    else if(score>=80){
+        return "Grade A";
+    }
+    else if(score>=60){
+        return "Grade B";
+    }
+    else if(score>=40){
+        return "Grade C";
+    }
+    else{
+        return "Fail";
+    }
+};
+console.log(getGrade(95)); 
+    </script>
+</body>
+</html>

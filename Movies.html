@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  const movies=[
+        {title:"The Untamed", year:2019, genre:"historical", rating:10.0},
+        {title:"My love from another star", year:2016, genre:"romance", rating:8.2},
+        {title:"High Kick", year:2011, genre:"comedy", rating:9.0},       
+        ]
+        const foundMovie=movies.find(movie=>movie.title==="The Untamed");
+        console.log("Found Movie:", foundMovie);
+
+        const filteredMovies=movies.filter(movie=>movie.rating>=9.0);
+        console.log("Filtered Movies:", filteredMovies);
+
+        const mapMovies=movies.map(movie=>movie.title);
+        console.log("Mapped Movies:", mapMovies);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const bmi = (weight, height) =>
+    {
+        return weight / (height * height);
+
+     };
+    const result = bmi(70, 1.6);
+   if(result<18.5){
+        console.log("Your BMI is Underweight");
+    }
+    else if(result>=18.5 && result<=24.9){
+        console.log("Your BMI is Normal weight");
+    }
+    else if(result>=25 && result<=29.9){
+        console.log("Your BMI is Overweight");
+    }
+    else if(result>=30){
+        console.log("Your BMI is Obese");
+    }
+    else{
+        console.log("Invalid BMI");
+    }
+    </script>
+</body>
+</html>
